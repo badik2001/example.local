@@ -135,7 +135,7 @@
         Equation to solve: <input name=a value=>&middot;x<sup>2</sup> + 
             <input name=b value=>&middot;x + 
             <input name=c value=>&middot; =0 <br>
-        <input type=submit value='Solve it'>  
+        <button type=submit>Solve it</button>
     </form>
     <?php
 
