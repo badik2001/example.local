@@ -1,3 +1,6 @@
+<?php
+header('Set-Cookie: foo=42');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +11,12 @@
 <body>
     
     <h1>"hello"</h1>
-    <?php 
-    
-        include __DIR__ . '/functions.php';
-        echo sum(10, 20);
+    <form action="upload.php" method="post" enctype="multipart/form-data">
 
-    ?>
+        <input type='file' name="picture">
+        <button type="submit">Отправить</button>
+
+    </form>
+
 </body>
 </html>
