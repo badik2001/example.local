@@ -1,6 +1,9 @@
 <?php
+require __DIR__ . '/classes/GuestBook.php';
 require __DIR__ . '/classes/Table.php';
 require __DIR__ . '/classes/Cabinet.php';
+require_once __DIR__ . '/classes/User.php';
+require_once __DIR__ . '/classes/Item.php';
 //setcookie('username', 'admin');
 //setcookie('secret', sha1('13.04.1980'));
 $users = require_once __DIR__ . '/users.php';
@@ -48,7 +51,7 @@ $users = require_once __DIR__ . '/users.php';
     $table1-> legs = 4;
     $table1-> price = 1000;
 //    $table1-> setPrice(1000);
- 
+
     echo $table1->show();
 
     $table2 = new Table;
@@ -62,8 +65,36 @@ $users = require_once __DIR__ . '/users.php';
     $cab = new Cabinet;
     $cab-> doors = 2;
     $cab-> price = 5000;
-
+    
     echo $cab->show();
+    
     ?>
+    <p><b>Type Hinting</b></p>
+
+    <?php
+    if ($table1 instanceof Table) {
+        echo 'Это - стол!';
+    }
+    ?>
+    <hr>
+
+
+    <?php
+    $user = new User;
+    $user-> email = 'test@test.com';
+    // ...
+    $item = new Item(1000);
+    // ...
+    sendMessage($user, 'Hello');
+    ?>
+    <p><b>ORM</b></p>
+
+    <?php
+    $guestBook = new GuestBook(__DIR__ . '/data.txt') 
+    ?> 
+    <?php foreach ($guestBook->getRecords() as $record) {?>
+        <?php echo $record -> getMessage(); ?>
+        <hr>
+    <?php } ?>
 </body>
 </html>
