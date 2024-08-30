@@ -36,6 +36,17 @@ function getGuestBookRecords()
     return $ret;
 }
 
+function getGuestBook() {
+    // Получаем содержимое файла в виде массива. Обращаемся
+    // по HTTP-протоколу, чтобы получить HTML-код с удалённого сервера
+    $lines = file(__DIR__ . '/guests.txt', FILE_IGNORE_NEW_LINES);
+
+    // Обходим элементы массива и выводим содержимое как HTML-код с номерами строк
+    foreach ($lines as $line_num => $line) {
+        echo "Строка #<b>{$line_num}</b> : " . htmlspecialchars($line) . "<br />\n";
+    }
+}
+
 assert(3 === sum(1, 2));
 assert(256 === discriminant(3, -4, -20));
 assert(-4 == root2(1, 3, -4));

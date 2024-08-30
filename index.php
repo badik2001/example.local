@@ -75,6 +75,7 @@ $users = require_once __DIR__ . '/users.php';
     if ($table1 instanceof Table) {
         echo 'Это - стол!';
     }
+
     ?>
     <hr>
 
@@ -95,6 +96,7 @@ $users = require_once __DIR__ . '/users.php';
     <?php foreach ($guestBook->getRecords() as $record) {?>
         <?php echo $record -> getMessage(); ?>
         <hr>
-    <?php } ?>
+    <?php }     
+    echo getGuestBook();?>
 </body>
 </html>
