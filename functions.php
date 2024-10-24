@@ -1,6 +1,6 @@
 <?php 
 
-require_once __DIR__ . '/classes/GuestBookRecord.php';
+// require_once __DIR__ . '/classes/GuestBookRecord.php';
 
 function sum($x, $y)
 {
@@ -21,20 +21,20 @@ function root2($a, $b, $c)
     return (-$b - sqrt(discriminant($a, $b, $c)))/(2*$a);
 }
 
-function sendMessage(User $user, string $message)
-{
-    echo $user->email . '->' . $message;
-}
+// function sendMessage(User $user, string $message)
+// {
+//     echo $user->email . '->' . $message;
+// }
 
-function getGuestBookRecords() 
-{
-    $lines =  file(__DIR__ . '/data.txt', FILE_IGNORE_NEW_LINES);
-    $ret = [];
-    foreach ($lines as $line) {
-        $ret[] = new GuestBookRecords($line);
-    }
-    return $ret;
-}
+// function getGuestBookRecords() 
+// {
+//     $lines =  file(__DIR__ . '/data.txt', FILE_IGNORE_NEW_LINES);
+//     $ret = [];
+//     foreach ($lines as $line) {
+//         $ret[] = new GuestBookRecords($line);
+//     }
+//     return $ret;
+// }
 
 function getGuestBook() {
     // Получаем содержимое файла в виде массива. Обращаемся

@@ -1,9 +1,9 @@
 <?php
-require __DIR__ . '/classes/GuestBook.php';
-require __DIR__ . '/classes/Table.php';
-require __DIR__ . '/classes/Cabinet.php';
-require_once __DIR__ . '/classes/User.php';
-require_once __DIR__ . '/classes/Item.php';
+// require __DIR__ . '/classes/GuestBook.php';
+// require __DIR__ . '/classes/Table.php';
+// require __DIR__ . '/classes/Cabinet.php';
+// require_once __DIR__ . '/classes/User.php';
+// require_once __DIR__ . '/classes/Item.php';
 //setcookie('username', 'admin');
 //setcookie('secret', sha1('13.04.1980'));
 $users = require_once __DIR__ . '/users.php';
@@ -45,11 +45,11 @@ $users = require_once __DIR__ . '/users.php';
     ?>
     <p><b>Объектно-ориентированное программирование</b></p>
 
-    <?php
+    <?php /*
     $table1 = new Table;
     $table1-> color = 'red';
     $table1-> legs = 4;
-    $table1-> price = 1000;
+    $table1-> price = 1000; 
 //    $table1-> setPrice(1000);
 
     echo $table1->show();
@@ -87,16 +87,19 @@ $users = require_once __DIR__ . '/users.php';
     $item = new Item(1000);
     // ...
     sendMessage($user, 'Hello');
+    */
     ?>
     <p><b>ORM</b></p>
 
-    <?php
+    <?php /*
     $guestBook = new GuestBook(__DIR__ . '/data.txt') 
     ?> 
     <?php foreach ($guestBook->getRecords() as $record) {?>
         <?php echo $record -> getMessage(); ?>
         <hr>
     <?php }     
-    echo getGuestBook();?>
+    echo getGuestBook();
+    */
+    ?>
 </body>
 </html>
