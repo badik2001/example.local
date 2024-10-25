@@ -22,6 +22,8 @@ $users = require_once __DIR__ . '/users.php';
     <?php 
         include __DIR__ . '/functions.php';
         echo sum(10, 20);
+        $x = [1,2,3,4];
+        echo $x;
     ?>
     <p><b>Форма запроса для отправки картинки и обработки в upload.php  и сохранение картинки в папку pictures</b></p>
     <form action="upload.php" method="post" enctype="multipart/form-data">
