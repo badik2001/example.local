@@ -24,7 +24,7 @@ $users = require_once __DIR__ . '/users.php';
         echo sum(10, 20);
     ?>
     <?php
-        $x = [2,3,4];
+        $x = [1,2,3,4];
         var_dump($x);
     ?>
     <p><b>Форма запроса для отправки картинки и обработки в upload.php  и сохранение картинки в папку pictures</b></p>
