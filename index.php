@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    
+
 <?php
 // require __DIR__ . '/classes/GuestBook.php';
 // require __DIR__ . '/classes/Table.php';
@@ -8,14 +19,7 @@
 //setcookie('secret', sha1('13.04.1980'));
 $users = require_once __DIR__ . '/users.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documf</title>
-</head>
-<body>
+
     
     <h1>"hello"</h1>
     <p><b>Функция суммы 10 и 20</b></p>
@@ -27,6 +31,29 @@ $users = require_once __DIR__ . '/users.php';
         $x = [1,2,3,4];
         var_dump($x);
     ?>
+        </br>
+    <?php    
+        $x[] = 100;
+        var_dump($x)
+    ?>
+        </br>
+    <?php    
+        $x[0] = 'хуй';
+        var_dump($x[0][1])
+    ?>
+    </br>
+    <table class='table'>
+    <?php    
+        foreach ($x as $key => $i) {
+        ?>
+        <tr class='tr'>
+            <th clsss='th'> <?php echo $key; ?> </td>
+            <td clsss='td'> <?php echo $i; ?> </td>
+        </tr>
+    <?php 
+        }
+    ?>
+    </table>
     <p><b>Форма запроса для отправки картинки и обработки в upload.php  и сохранение картинки в папку pictures</b></p>
     <form action="upload.php" method="post" enctype="multipart/form-data">
 
