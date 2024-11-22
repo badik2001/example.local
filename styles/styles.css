@@ -1,9 +1,11 @@
-
-
 .table{
     border: 1px solid black;
 }
 
 .tr{
     border: 1px solid black;
+}
+
+.calculator{
+    display: flex;
 }
