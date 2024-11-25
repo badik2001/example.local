@@ -7,31 +7,30 @@
     <link rel="stylesheet" href="../../styles/styles.css">
 </head>
 <body>
-<form action="form.php" method="get">
-    <div class="calculator">
-      <div>
-        <input name="first_number" type="text" required placeholder="Число">
-    </div>
-    <div>
-        <div>
-            <input name="plus" type="radio">+
-        </div>
-        <div>
-            <input name="minus" type="radio">-
-        </div>
-        <div>
-            <input name="multiplication" type="radio">/
-        </div>
-        <div>
-            <input name="division" type="radio">*
-        </div>
-    </div>
-    <div>
-        <input name="second_number" type="text" required placeholder="Число">
-    </div>
-        <input type="submit" value="Посчитать">  
-    </div>
-    
-</form>
+    <h1>
+        Homework 3
+    </h1>
+    <h2>
+        Calculator
+    </h2>
+        <form action="form.php" method="get">
+        <input type="text" name="first_number">
+        <select name="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="second_number">
+        <input type="submit" value="Посчитать">
+    </form>
+    <h2>
+        Photo Gallery
+    </h2>
+    <?php
+    $images[
+        
+    ]
+    ?>
 </body> 
 </html>
